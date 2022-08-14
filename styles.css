@@ -1,10 +1,21 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Me5Q.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/roboto/v30/KFOlCnqEu92Fr1MmWUlvAw.ttf) format('truetype');
+}
 * {
   box-sizing: border-box;
 }
-
-body {
+* body {
   background-image: linear-gradient(90deg, #7d5fff, #7158e2);
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -14,13 +25,11 @@ body {
   overflow: hidden;
   margin: 0;
 }
-
-.search {
+* body .search {
   position: relative;
   height: 50px;
 }
-
-.search .input {
+* body .search .input {
   background-color: #fff;
   border: 0;
   font-size: 18px;
@@ -29,8 +38,10 @@ body {
   width: 50px;
   transition: width 0.3s ease;
 }
-
-.btn {
+* body .search .input:focus {
+  outline: none;
+}
+* body .search .btn {
   background-color: #fff;
   border: 0;
   cursor: pointer;
@@ -42,16 +53,12 @@ body {
   width: 50px;
   transition: transform 0.3s ease;
 }
-
-.btn:focus,
-.input:focus {
+* body .search .btn:focus {
   outline: none;
 }
-
-.search.active .input {
+* body .search.active .input {
   width: 200px;
 }
-
-.search.active .btn {
+* body .search.active .btn {
   transform: translateX(190px);
 }
